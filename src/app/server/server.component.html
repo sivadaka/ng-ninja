@@ -9,5 +9,10 @@
         </ng-template>
 
         <button (click)="isServerCreated()">Add Server</button>
+
+        <p [ngStyle]="{backgroundColor: setColor()}"
+        [ngClass]="{online: serverStatus === 'Online'}"
+        >Server with {{ serverId }} is {{ checkServerStatus() }}</p>
     </div>
 </div>
+
