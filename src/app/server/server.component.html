@@ -1,4 +1,13 @@
-<h2>app-server</h2>
-<hr>
-<h2> server with id: {{ serverId }} is {{ getServerName() }}</h2>
-<button class="btn btn-primary" [disabled]="isTrue">new button</button>
+<div class="container">
+    <div class="col xs 12">
+        <br>
+
+        <input type="text" [(ngModel)]="name">
+        <p *ngIf="serverCreated; else noServer">New Server was created with name: {{ name }}</p>
+        <ng-template #noServer>
+            <p >No server wasa created....</p>
+        </ng-template>
+
+        <button (click)="isServerCreated()">Add Server</button>
+    </div>
+</div>

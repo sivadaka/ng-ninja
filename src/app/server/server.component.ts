@@ -6,17 +6,11 @@ import { Component } from "@angular/core";
 })
 export class ServerComponent {
 
-    serverId: string = '123';
-    serverName: string = 'Eu_london';
-    isTrue = true;
+    name = '';
+    serverCreated = false;
+    serverId = 2;
 
-    getServerName() {
-        return this.serverName;
-    }
-
-    constructor() {
-        setTimeout(() => {
-            this.isTrue = false;
-        }, 2000);
+    isServerCreated() {
+        this.serverCreated = true;
     }
 }
