@@ -7,5 +7,11 @@ import { Component } from "@angular/core";
 })
 export class ServerComponent {
 
-    
+    showText = false;
+    log: any = [];
+
+    isDisplay() {
+        this.showText = !this.showText;
+        this.log.push(new Date());
+    }
 }
